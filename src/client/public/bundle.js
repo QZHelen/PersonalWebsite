@@ -65,6 +65,10 @@
 	
 	var _BackGround2 = _interopRequireDefault(_BackGround);
 	
+	var _ProjectItem = __webpack_require__(/*! ./components/main-nav/ProjectItem.jsx */ 436);
+	
+	var _ProjectItem2 = _interopRequireDefault(_ProjectItem);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -76,27 +80,31 @@
 	//require('./../style.css');
 	
 	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+	    _inherits(App, _React$Component);
 	
-	  function App() {
-	    _classCallCheck(this, App);
+	    function App() {
+	        _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-	  }
-	
-	  _createClass(App, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_NavItems2.default, null),
-	        _react2.default.createElement(_BackGround2.default, null)
-	      );
+	        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	    }
-	  }]);
 	
-	  return App;
+	    _createClass(App, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(_ProjectItem2.default, { imgsrc: "https://goo.gl/ekcchC",
+	                    position: "Technical Product Manager",
+	                    specifics: "GoDaddy | 2017.1 - 2017.5 | Sunnyvale CA",
+	                    bulletPts: ["• China Strategy", "• Code in react.js to product the frontend web product"],
+	                    skills: ["React.js", "User-centric Design", "HTML CSS Javascript", "Agile Development"],
+	                    demoLink: "http://google.com" })
+	            );
+	        }
+	    }]);
+	
+	    return App;
 	}(_react2.default.Component);
 	
 	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('root'));
@@ -42226,6 +42234,153 @@
 	}(_react2.default.Component);
 	
 	exports.default = BackGround;
+
+/***/ },
+/* 436 */
+/*!************************************************************!*\
+  !*** ./src/client/app/components/main-nav/ProjectItem.jsx ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 179);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/*
+	props:
+	    imgsrc: img src such as "https://goo.gl/ekcchC"
+	    position: for h3, such as "Technical Product Manager"
+	    specifics: such as "GoDaddy | 2017.1 - 2017.5 | Sunnyvale CA"
+	    bulletPts: an array of at most 3 strings each of which is a bullut point such as "• China Strategy"
+	    skills: an array of at most 4 strings each of which is a skill such as "React.js"
+	    demoLink: a string of link directing to the actual project demo
+	*/
+	var colors = ["w3-btn w3-light-green w3-animate-right", "w3-btn w3-red w3-animate-right", "w3-btn w3-blue w3-animate-right", "w3-btn w3-orange w3-animate-right"];
+	
+	var ProjectItem = function (_React$Component) {
+	    _inherits(ProjectItem, _React$Component);
+	
+	    function ProjectItem(props) {
+	        _classCallCheck(this, ProjectItem);
+	
+	        var _this = _possibleConstructorReturn(this, (ProjectItem.__proto__ || Object.getPrototypeOf(ProjectItem)).call(this, props));
+	
+	        _this.state = { colorCount: 0 };
+	        _this.buttonFactory = _this.buttonFactory.bind(_this);
+	        _this.bulletPtFactory = _this.bulletPtFactory.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(ProjectItem, [{
+	        key: 'buttonFactory',
+	        value: function buttonFactory() {
+	            var rows = [];
+	            for (var i = 0; i < 4; i++) {
+	                if (this.props.skills[i]) {
+	                    rows.push(_react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                            'button',
+	                            { className: colors[this.state.colorCount++] },
+	                            this.props.skills[i],
+	                            ' '
+	                        )
+	                    ));
+	                }
+	            }
+	            return _react2.default.createElement(
+	                'span',
+	                null,
+	                rows
+	            );
+	        }
+	    }, {
+	        key: 'bulletPtFactory',
+	        value: function bulletPtFactory() {
+	            var rows = [];
+	            for (var i = 0; i < 3; i++) {
+	                if (this.props.bulletPts[i]) {
+	                    rows.push(_react2.default.createElement(
+	                        'p',
+	                        null,
+	                        ' ',
+	                        this.props.bulletPts[i],
+	                        ' '
+	                    ));
+	                }
+	            }
+	            return _react2.default.createElement(
+	                'span',
+	                null,
+	                rows
+	            );
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'w3-third w3-margin-bottom' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'w3-card-4' },
+	                    _react2.default.createElement('img', { src: this.props.imgsrc, style: { width: "100%" } }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'w3-container' },
+	                        _react2.default.createElement(
+	                            'h3',
+	                            null,
+	                            ' ',
+	                            this.props.position,
+	                            ' '
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'w3-opacity' },
+	                            ' ',
+	                            this.props.specifics
+	                        ),
+	                        this.bulletPtFactory(),
+	                        this.buttonFactory(),
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: this.props.demoLink, className: 'w3-btn-block' },
+	                                'Demo'
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ProjectItem;
+	}(_react2.default.Component);
+	
+	exports.default = ProjectItem;
 
 /***/ }
 /******/ ]);

@@ -47,7 +47,6 @@ class BackGround extends React.Component {
                         <p>Work hard, Think Differently, Program</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-
             </Carousel>
         );
     }
