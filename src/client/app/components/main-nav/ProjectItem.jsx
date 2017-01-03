@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Navbar, NavItem, Nav, MenuItem, NavDropdown} from 'react-bootstrap';
 
 /*
 props:

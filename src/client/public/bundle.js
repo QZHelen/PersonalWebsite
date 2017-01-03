@@ -61,11 +61,15 @@
 	
 	var _NavItems2 = _interopRequireDefault(_NavItems);
 	
-	var _BackGround = __webpack_require__(/*! ./components/main-nav/BackGround.jsx */ 435);
+	var _NavW = __webpack_require__(/*! ./components/main-nav/NavW3.jsx */ 435);
+	
+	var _NavW2 = _interopRequireDefault(_NavW);
+	
+	var _BackGround = __webpack_require__(/*! ./components/main-nav/BackGround.jsx */ 437);
 	
 	var _BackGround2 = _interopRequireDefault(_BackGround);
 	
-	var _ProjectItem = __webpack_require__(/*! ./components/main-nav/ProjectItem.jsx */ 436);
+	var _ProjectItem = __webpack_require__(/*! ./components/main-nav/ProjectItem.jsx */ 438);
 	
 	var _ProjectItem2 = _interopRequireDefault(_ProjectItem);
 	
@@ -94,6 +98,7 @@
 	            return _react2.default.createElement(
 	                'div',
 	                null,
+	                _react2.default.createElement(_NavW2.default, null),
 	                _react2.default.createElement(_ProjectItem2.default, { imgsrc: "https://goo.gl/ekcchC",
 	                    position: "Technical Product Manager",
 	                    specifics: "GoDaddy | 2017.1 - 2017.5 | Sunnyvale CA",
@@ -42116,6 +42121,130 @@
 
 /***/ },
 /* 435 */
+/*!******************************************************!*\
+  !*** ./src/client/app/components/main-nav/NavW3.jsx ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _NavItemW = __webpack_require__(/*! ./NavItemW3.jsx */ 436);
+	
+	var _NavItemW2 = _interopRequireDefault(_NavItemW);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var NavW3 = function (_React$Component) {
+	    _inherits(NavW3, _React$Component);
+	
+	    function NavW3() {
+	        _classCallCheck(this, NavW3);
+	
+	        return _possibleConstructorReturn(this, (NavW3.__proto__ || Object.getPrototypeOf(NavW3)).apply(this, arguments));
+	    }
+	
+	    _createClass(NavW3, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'w3-top' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'w3-row w3-large' },
+	                    _react2.default.createElement(_NavItemW2.default, { navLink: "#Study", navTopic: "Academic Focus" }),
+	                    _react2.default.createElement(_NavItemW2.default, { navLink: "#Strength", navTopic: "Strength" }),
+	                    _react2.default.createElement(_NavItemW2.default, { navLink: "#Interests", navTopic: "Interests" }),
+	                    _react2.default.createElement(_NavItemW2.default, { navLink: "#Contact", navTopic: "Contact" })
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return NavW3;
+	}(_react2.default.Component);
+	
+	exports.default = NavW3;
+
+/***/ },
+/* 436 */
+/*!**********************************************************!*\
+  !*** ./src/client/app/components/main-nav/NavItemW3.jsx ***!
+  \**********************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	/*
+	props:
+	    navLink: link to one section related to one topic
+	    navTopic: topic name
+	*/
+	var NavItemW3 = function (_React$Component) {
+	    _inherits(NavItemW3, _React$Component);
+	
+	    function NavItemW3() {
+	        _classCallCheck(this, NavItemW3);
+	
+	        return _possibleConstructorReturn(this, (NavItemW3.__proto__ || Object.getPrototypeOf(NavItemW3)).apply(this, arguments));
+	    }
+	
+	    _createClass(NavItemW3, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "w3-col s3" },
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: this.props.navLink, className: "w3-btn-block w3-black" },
+	                    this.props.navTopic
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return NavItemW3;
+	}(_react2.default.Component);
+	
+	exports.default = NavItemW3;
+
+/***/ },
+/* 437 */
 /*!***********************************************************!*\
   !*** ./src/client/app/components/main-nav/BackGround.jsx ***!
   \***********************************************************/
@@ -42236,13 +42365,13 @@
 	exports.default = BackGround;
 
 /***/ },
-/* 436 */
+/* 438 */
 /*!************************************************************!*\
   !*** ./src/client/app/components/main-nav/ProjectItem.jsx ***!
   \************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -42253,8 +42382,6 @@
 	var _react = __webpack_require__(/*! react */ 1);
 	
 	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 179);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -42290,85 +42417,85 @@
 	    }
 	
 	    _createClass(ProjectItem, [{
-	        key: 'buttonFactory',
+	        key: "buttonFactory",
 	        value: function buttonFactory() {
 	            var rows = [];
 	            for (var i = 0; i < 4; i++) {
 	                if (this.props.skills[i]) {
 	                    rows.push(_react2.default.createElement(
-	                        'p',
+	                        "p",
 	                        null,
 	                        _react2.default.createElement(
-	                            'button',
+	                            "button",
 	                            { className: colors[this.state.colorCount++] },
 	                            this.props.skills[i],
-	                            ' '
+	                            " "
 	                        )
 	                    ));
 	                }
 	            }
 	            return _react2.default.createElement(
-	                'span',
+	                "span",
 	                null,
 	                rows
 	            );
 	        }
 	    }, {
-	        key: 'bulletPtFactory',
+	        key: "bulletPtFactory",
 	        value: function bulletPtFactory() {
 	            var rows = [];
 	            for (var i = 0; i < 3; i++) {
 	                if (this.props.bulletPts[i]) {
 	                    rows.push(_react2.default.createElement(
-	                        'p',
+	                        "p",
 	                        null,
-	                        ' ',
+	                        " ",
 	                        this.props.bulletPts[i],
-	                        ' '
+	                        " "
 	                    ));
 	                }
 	            }
 	            return _react2.default.createElement(
-	                'span',
+	                "span",
 	                null,
 	                rows
 	            );
 	        }
 	    }, {
-	        key: 'render',
+	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
-	                'div',
-	                { className: 'w3-third w3-margin-bottom' },
+	                "div",
+	                { className: "w3-third w3-margin-bottom" },
 	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'w3-card-4' },
-	                    _react2.default.createElement('img', { src: this.props.imgsrc, style: { width: "100%" } }),
+	                    "div",
+	                    { className: "w3-card-4" },
+	                    _react2.default.createElement("img", { src: this.props.imgsrc, style: { width: "100%" } }),
 	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'w3-container' },
+	                        "div",
+	                        { className: "w3-container" },
 	                        _react2.default.createElement(
-	                            'h3',
+	                            "h3",
 	                            null,
-	                            ' ',
+	                            " ",
 	                            this.props.position,
-	                            ' '
+	                            " "
 	                        ),
 	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'w3-opacity' },
-	                            ' ',
+	                            "p",
+	                            { className: "w3-opacity" },
+	                            " ",
 	                            this.props.specifics
 	                        ),
 	                        this.bulletPtFactory(),
 	                        this.buttonFactory(),
 	                        _react2.default.createElement(
-	                            'p',
+	                            "p",
 	                            null,
 	                            _react2.default.createElement(
-	                                'a',
-	                                { href: this.props.demoLink, className: 'w3-btn-block' },
-	                                'Demo'
+	                                "a",
+	                                { href: this.props.demoLink, className: "w3-btn-block" },
+	                                "Demo"
 	                            )
 	                        )
 	                    )
