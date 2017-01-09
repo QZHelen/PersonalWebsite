@@ -31,6 +31,7 @@ class ProjectItem extends React.Component {
         return <span>{rows}</span>;
       }
 
+
       bulletPtFactory() {
           var rows = [];
         for (var i=0; i < 3; i++) {
@@ -47,7 +48,7 @@ class ProjectItem extends React.Component {
         return (
         <div className="w3-third w3-margin-bottom">
             <div className="w3-card-4">
-             <img src= {this.props.imgsrc} style={{width: "100%"}}/>
+             <img src= {this.props.imgsrc} alt={"Mike"} style={{width: "100%"}}/>
              <div className="w3-container">
                 <h3> {this.props.position} </h3>
                 <p className = "w3-opacity"> {this.props.specifics}</p>
